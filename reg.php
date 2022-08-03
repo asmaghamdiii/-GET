@@ -1,19 +1,19 @@
 <?php
 
- $conn"mysqli_connect( '127.0.0.1 , root , ' ' test');
+ $conn= mysqli_connect( '127.0.0.1' , 'root' , '' , 'test');
 
- if (!conn) {
+ if (!$conn) {
 
    echo 'no connection';
 
  }
  else { echo ' connected';}
 
- $name=$_POST['name'];
- $email=$_POST['email'];
- $pass=$_POST['pass'];
+ $name=$_GET['name'];
+ $email=$_GET['email'];
+ $pass=$_GET['pass'];
 
- sql="INSERT INTO user (name,email,pass) values ('$name' , '$Email' , '$pass')";
+ #sql="INSERT INTO user (name,email,pass) values ('$name' , '$email' , '$pass')";
 
  if (!mysqli_query ($conn , $sql)) {
 
